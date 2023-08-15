@@ -1,9 +1,48 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<SharedDataSet xmlns="http://schemas.microsoft.com/sqlserver/reporting/2010/01/shareddatasetdefinition">
+<SharedDataSet xmlns="http://schemas.microsoft.com/sqlserver/reporting/2010/01/shareddatasetdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
   <DataSet Name="DataSet1">
     <Query>
       <DataSourceReference>DataSource1</DataSourceReference>
-      <CommandText />
+      <CommandText>SELECT                      Person.Address.*
+FROM                         Person.Address</CommandText>
     </Query>
+    <Fields>
+      <Field Name="AddressID">
+        <DataField>AddressID</DataField>
+        <rd:TypeName>System.Int32</rd:TypeName>
+      </Field>
+      <Field Name="AddressLine1">
+        <DataField>AddressLine1</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="AddressLine2">
+        <DataField>AddressLine2</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="City">
+        <DataField>City</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="StateProvinceID">
+        <DataField>StateProvinceID</DataField>
+        <rd:TypeName>System.Int32</rd:TypeName>
+      </Field>
+      <Field Name="PostalCode">
+        <DataField>PostalCode</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="SpatialLocation">
+        <DataField>SpatialLocation</DataField>
+        <rd:TypeName>Microsoft.SqlServer.Types.SqlGeography</rd:TypeName>
+      </Field>
+      <Field Name="rowguid">
+        <DataField>rowguid</DataField>
+        <rd:TypeName>System.Guid</rd:TypeName>
+      </Field>
+      <Field Name="ModifiedDate">
+        <DataField>ModifiedDate</DataField>
+        <rd:TypeName>System.DateTime</rd:TypeName>
+      </Field>
+    </Fields>
   </DataSet>
 </SharedDataSet>
